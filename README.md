@@ -21,6 +21,17 @@ The same values are configured in the app itself, in `Config/Release.xcconfig`
 there in the same breath: a released build carries whatever it was built with,
 for as long as it stays installed on a phone.
 
+## LifeOS Finance
+
+A personal finance planning app. Works with no account; bank and card linking
+is a separate, optional feature, off by default and read-only through Plaid.
+
+| Page | URL |
+| --- | --- |
+| Privacy Policy | https://mcseagate.github.io/ApexRootsolutions/lifeos-finance/privacy/ |
+| Terms of Use | https://mcseagate.github.io/ApexRootsolutions/lifeos-finance/terms/ |
+| Support | https://mcseagate.github.io/ApexRootsolutions/lifeos-finance/support/ |
+
 ## Layout
 
 Each product owns a directory, because each collects different things and
@@ -31,6 +42,8 @@ rather than editing anything here.
 index.html                       the list above
 style.css                        shared by every page
 berean-scroll/
+  index.html  privacy/  terms/  support/
+lifeos-finance/
   index.html  privacy/  terms/  support/
 ```
 

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — LifeOS Finance</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">LifeOS Finance</p>
+  <h1>Privacy Policy</h1>
+  <p class="dates">Effective 6 September 2026 · Last updated 6 September 2026</p>
+</header>
+
+<p class="lede">LifeOS Finance is a personal finance planning app published by
+Apex Root Solutions LLC. This policy explains what the app keeps on your
+device, what it sends if you choose to link a bank or card, and what happens
+to anything it sends. It describes the app as it actually behaves.</p>
+
+<div class="panel">
+<p><strong>The short version.</strong> No account is required. Budgets, goals,
+debts, insurance records and every other figure you enter by hand stay on your
+device. Bank and card linking is a separate, optional feature, off until you
+turn it on, and read-only when you do. There is no advertising, no analytics
+of any kind, and we never sell your information. The app cannot move
+money — it has no ability to make a payment, a transfer or a trade.</p>
+</div>
+
+<h2>1. Who we are</h2>
+
+<p>LifeOS Finance is published by Apex Root Solutions LLC ("we", "us"), a
+limited liability company organised under the laws of the State of Delaware,
+with its registered office in Wilmington, New Castle County, Delaware, and its
+principal place of business in Cedar Hill, Dallas County, Texas. We are the
+controller of the personal data described here.</p>
+
+<p>Contact us at <a href="mailto:support@apsoluts.com">support@apsoluts.com</a>
+for any question about this policy, or to exercise any right described in
+section 8.</p>
+
+<h2>2. What stays on your device</h2>
+
+<p>The following are created and stored locally, and are not transmitted to us
+unless you link a bank or card (section 3):</p>
+
+<ul>
+  <li>Accounts, balances and transactions you enter by hand</li>
+  <li>Budgets, categories, rules and month-close records</li>
+  <li>Bills, subscriptions and renewal decisions</li>
+  <li>Savings goals, sinking funds and paycheck allocation plans</li>
+  <li>Debt, insurance, property, vehicle and investment records you add</li>
+  <li>Income, payroll, benefit and equity-compensation figures you enter</li>
+  <li>Household members, permissions and workspace settings</li>
+  <li>Documents you upload for the app's own records, and their extracted
+      fields</li>
+  <li>Copilot conversations, and anything in the AI memory dashboard</li>
+  <li>Accessibility, privacy-mode and notification settings</li>
+</ul>
+
+<p>Where you record information about another household member — a partner, a
+dependent, someone whose insurance or property you track — you are responsible
+for having the right to do so. That information is stored on your device the
+same as your own.</p>
+
+<h2>3. Bank and card linking (Plaid)</h2>
+
+<p>Linking is a separate feature, off by default. With it off, the app sends
+nothing anywhere on its own. Turning it on lets you connect a bank or card
+through <a href="https://plaid.com/legal/">Plaid, Inc.</a>, which we use as our
+processor for this feature only.</p>
+
+<div class="scroll">
+<table>
+<thead>
+<tr><th>What happens</th><th>What is sent</th><th>What is kept, and where</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>You start linking</td>
+  <td>A request for a short-lived Plaid <code>link_token</code></td>
+  <td>Nothing about you yet. The token is created by our server and used only
+      to open Plaid's own connection screen.</td>
+</tr>
+<tr>
+  <td>You sign in at your bank inside Plaid's screen</td>
+  <td>Your bank credentials, entered directly into Plaid's interface — never
+      seen by the app or by us</td>
+  <td>Held by Plaid and by your bank, under Plaid's own privacy policy, linked
+      above.</td>
+</tr>
+<tr>
+  <td>Linking completes</td>
+  <td>A one-time token, exchanged by our server for ongoing read access to the
+      accounts you approved</td>
+  <td>Our server stores that access grant, the linked institution's name, and
+      a sync position, for as long as the connection stays linked. It never
+      sends the access grant itself back to your device.</td>
+</tr>
+<tr>
+  <td>The app shows your accounts and transactions</td>
+  <td>A request from your device to our server</td>
+  <td>Our server asks Plaid for your current balances and transactions and
+      relays them to your device. We do not keep a separate copy of your
+      transaction history or balances on our server.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Linking is read-only. The app requests transaction and balance data only —
+never a Plaid product that could move money, and never Plaid's payment or
+transfer products. Disconnect a linked institution at any time from Accounts
+&amp; Cash; doing so revokes the access grant and deletes it from our server.</p>
+
+<h2>4. What we do not do</h2>
+
+<ul>
+  <li>No advertising, and no sale or sharing of personal data with
+      advertisers.</li>
+  <li>No analytics or product-telemetry service of any kind. The app contains
+      no analytics provider.</li>
+  <li>No third-party trackers, SDKs or advertising identifiers.</li>
+  <li>No profiling, and no automated decision-making with legal or similarly
+      significant effects.</li>
+  <li>No initiating a payment, transfer, trade, or any other movement of
+      money, ever, under any setting.</li>
+  <li>No use of your financial data to train a third-party AI model, unless
+      you separately opt in — and by default, we do not.</li>
+</ul>
+
+<h2>5. The AI Copilot</h2>
+
+<p>The Copilot answers questions about your finances by running the same
+deterministic calculations the rest of the app uses on your own figures — it
+does not send your data to a third-party AI or language-model provider. Its
+answers are shown alongside the source figures they came from.</p>
+
+<p>The AI memory dashboard lets you view, edit, disable or delete anything the
+Copilot has remembered about your preferences. It is stored on your device.
+Using it to personalise answers, and any broader use of your data to improve
+the product, are both governed by settings you control and are off by default
+where the app describes them as opt-in.</p>
+
+<h2>6. Notifications</h2>
+
+<p>Reminders — bills due, budget variance, goal milestones, unusual activity —
+are scheduled on your device from your own data. Nothing about them is sent to
+us. You control which categories notify you, and how much they show on a lock
+screen. Security notifications cannot be turned off, because something reaching
+your accounts is worth being told about regardless of your other preferences.</p>
+
+<h2>7. Children</h2>
+
+<p>LifeOS Finance is not directed to children and is not designed for use by
+anyone under 18. We do not knowingly collect personal data from a child. A
+household's own records may name a minor — a dependent, for instance — entered
+by an adult user; that is the adult's data, about their household, kept under
+section 2. If you believe a child has given us personal data directly, write
+to <a href="mailto:support@apsoluts.com">support@apsoluts.com</a> and we will
+delete it.</p>
+
+<h2>8. Security and retention</h2>
+
+<p>Data in transit to and from our server is encrypted with TLS. Plaid access
+grants are held only on our server, never on your device, and never in a
+backup you control. We keep a linked institution's access grant and sync
+position for as long as it stays linked, and delete both when you disconnect
+it or when Plaid reports the connection has been revoked at your bank.</p>
+
+<p>No system is perfectly secure, and we do not claim otherwise. The app
+having no account and no server copy of your entered data limits what a
+breach of our systems could expose; it does not protect your device itself if
+it is lost, stolen, or unlocked in someone else's hand.</p>
+
+<h2>9. Your rights</h2>
+
+<p>You can access, correct, export and delete your data. Data you entered by
+hand can be edited or deleted directly in the app, and exported from Settings.
+To have us delete a Plaid access grant and anything associated with it on our
+server, disconnect the institution in the app, or write to
+<a href="mailto:support@apsoluts.com">support@apsoluts.com</a>.</p>
+
+<p>Depending on where you live, you may also have the right to object to or
+restrict processing, to data portability, and to complain to a supervisory
+authority. If you are in the European Economic Area or the United Kingdom, our
+legal bases are: performance of a contract (the features you use), legitimate
+interests (security, reliability, preventing abuse), and consent where we ask
+for it. We do not sell personal information or share it for cross-context
+behavioural advertising as those terms are used in California law.</p>
+
+<h2>10. International transfers</h2>
+
+<p>We operate from Texas, in the United States, and data we process is
+processed in the United States. Plaid may process linking data in other
+countries under its own policy. Where we transfer personal data out of the EEA
+or the UK, we rely on the European Commission's standard contractual clauses.</p>
+
+<h2>11. Changes</h2>
+
+<p>If we change this policy we will update the date at the top of this page. If
+a change materially affects how we handle your data, we will say so in the app
+before it takes effect.</p>
+
+<footer class="foot">
+  <p>Apex Root Solutions LLC ·
+     <a href="mailto:support@apsoluts.com">support@apsoluts.com</a></p>
+  <nav class="pages">
+    <a href="../">LifeOS Finance</a>
+    <a href="../terms/">Terms of Use</a>
+  </nav>
+</footer>
+
+</div>
+</body>
+</html>
