@@ -1,0 +1,44 @@
+# Publishes this repository as the GitHub Pages site.
+#
+# Needed because Settings → Pages is set to "GitHub Actions" as its source,
+# which publishes nothing on its own: it waits for a workflow to upload an
+# artifact. With no workflow here, the site was enabled and never built —
+# `has_pages` was true, and every URL returned 404, with no failure anywhere
+# to notice. The app shipped links to those URLs, so the silence reached
+# people.
+#
+# The whole repository is the site. There is nothing here that is not meant to
+# be public: it exists so a store reviewer and a reader can open the privacy
+# policy and the terms.
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never two deployments at once, and never cancel one half-done: a partly
+# published policy is worse than a slightly stale one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
