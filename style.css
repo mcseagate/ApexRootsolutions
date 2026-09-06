@@ -1,0 +1,131 @@
+/*
+ One stylesheet for the published legal pages.
+
+ These are read by somebody deciding whether to trust an app with their study
+ notes and their prayers, and by a store reviewer checking a link resolves.
+ Both want the same thing: plain type, a comfortable measure, and no cleverness.
+*/
+:root {
+    color-scheme: light dark;
+    --ground: #fbf9f4;
+    --panel: #ffffff;
+    --ink: #241f18;
+    --ink-soft: #5c5347;
+    --rule: #e2dbcd;
+    --accent: #7a5c33;
+    --measure: 34rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ground: #14120f;
+        --panel: #1c1916;
+        --ink: #ece6da;
+        --ink-soft: #a49b8b;
+        --rule: #322c24;
+        --accent: #cbA76a;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 16px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 3rem 1.25rem 5rem;
+}
+
+header.masthead {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+    font: 600 0.72rem/1 ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.75rem;
+}
+
+h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    text-wrap: balance;
+}
+
+h2 {
+    font-size: 1.15rem;
+    margin: 2.5rem 0 0.6rem;
+    text-wrap: balance;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 1.6rem 0 0.4rem;
+}
+
+p, li { color: var(--ink); }
+
+.lede { color: var(--ink-soft); font-size: 1.02rem; }
+
+.dates {
+    font: 0.82rem/1.5 ui-sans-serif, system-ui, sans-serif;
+    color: var(--ink-soft);
+    margin: 0;
+}
+
+ul { padding-left: 1.15rem; }
+li { margin-bottom: 0.4rem; }
+
+a { color: var(--accent); }
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 1rem 1.15rem;
+    margin: 1.5rem 0;
+}
+
+.panel p:first-child { margin-top: 0; }
+.panel p:last-child { margin-bottom: 0; }
+
+.todo {
+    border-left: 3px solid #b4522f;
+    background: color-mix(in srgb, #b4522f 8%, transparent);
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    font: 0.9rem/1.55 ui-sans-serif, system-ui, sans-serif;
+}
+
+footer.foot {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font: 0.85rem/1.6 ui-sans-serif, system-ui, sans-serif;
+    color: var(--ink-soft);
+}
+
+nav.pages {
+    font: 0.85rem/1.6 ui-sans-serif, system-ui, sans-serif;
+    margin-top: 0.75rem;
+}
+
+nav.pages a { margin-right: 1rem; }
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 0.78rem/1.4 ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); }
+
+.scroll { overflow-x: auto; }
