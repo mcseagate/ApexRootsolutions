@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — LinguaGo</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">LinguaGo</p>
+  <h1>Privacy Policy</h1>
+  <p class="dates">Effective 8 September 2026 · Last updated 8 September 2026</p>
+</header>
+
+<p class="lede">LinguaGo translates what you type, say, photograph or hand it as
+a document. Translating means text sometimes has to leave your phone, so this
+policy is mostly about exactly when that happens, what goes with it, and what
+does not. It describes the app as it actually behaves.</p>
+
+<div class="panel">
+<p><strong>The short version.</strong> There is no account, so there is nothing
+about you to hold. We do not collect your location, an advertising identifier,
+your contacts, or a device fingerprint. Where your phone can translate on its
+own it does, and nothing leaves at all. Where it cannot, the text you asked for
+is sent through our own translation server to an AI model and the result comes
+back — the text is not kept, except that short generic phrases may be reused so
+nobody pays twice to translate the same sentence, which you can switch off.
+Photographs are read on your device and never uploaded. Usage and crash
+reporting are off unless you turn them on, and carry no identifier at all.</p>
+</div>
+
+<h2>1. Who we are</h2>
+
+<p>LinguaGo is published by Apex Root Solutions LLC ("we", "us"), a limited
+liability company organised under the laws of the State of Delaware, with its
+registered office in Wilmington, New Castle County, Delaware, and its principal
+place of business in Cedar Hill, Dallas County, Texas. We are the controller of
+the limited personal data described here. You can reach us at
+<a href="mailto:support@apsoluts.com">support@apsoluts.com</a>.</p>
+
+<h2>2. There is no account</h2>
+
+<p>LinguaGo has no sign-up, no login, no email address and no profile. We do not
+know who you are, and we have no user record to look you up in. Everything the
+app remembers — your history, your saved phrases, your trips, your settings —
+is stored in the app's own storage on your device.</p>
+
+<h2>3. When a translation stays on your phone</h2>
+
+<p>If you have downloaded an offline language pack for the pair you are
+translating, the translation runs entirely on your device and nothing leaves it.
+On iPhone and iPad this uses Apple's on-device translation; on Android it uses
+Google's ML Kit translation models, which run locally once downloaded. Results
+produced this way are labelled <em>On-device</em> in the app.</p>
+
+<h2>4. When a translation leaves your phone</h2>
+
+<p>For a language pair with no downloaded model, the text you asked to translate
+is sent over an encrypted connection to a translation server we operate. That
+server passes it to Google's Gemini API and returns the result. If that call
+fails, it is sent to Mistral instead, so one provider's outage is not an outage
+for you. Every result produced this way is labelled <em>AI translation</em> in
+the app, so you always know which happened.</p>
+
+<p>What is sent is the text itself, the two language codes, and nothing else.
+Your name is not attached, because we do not have it. No identifier travels with
+the text — see section 6 on how your daily allowance is counted without one.</p>
+
+<p>Google and Mistral process the text as our processors in order to return a
+translation. Neither is given an identifier for you, and we do not permit either
+to use the text to train their models.</p>
+
+<h2>5. The shared phrase cache</h2>
+
+<p>Travellers ask for the same sentences. To avoid paying to translate "where is
+the train station" thousands of times, our server may keep a short, generic
+phrase and its translation, and reuse it for everyone. This is a switch in
+Settings and you can turn it off, after which nothing you translate is stored at
+any point.</p>
+
+<p>While it is on, the following are <strong>never</strong> kept, regardless of
+the setting:</p>
+
+<ul>
+  <li>anything longer than a single short sentence;</li>
+  <li>anything containing a number, an address, an email address or a link;</li>
+  <li>anything that looks like a personal name;</li>
+  <li>everything from Documents, and everything from Conversation mode.</li>
+</ul>
+
+<p>These rules are applied on the server before anything is written. They are
+deliberately blunt and will refuse to cache many harmless phrases, because the
+cost of wrongly refusing is one extra translation and the cost of wrongly
+keeping is somebody else's sentence in a shared store.</p>
+
+<h2>6. How your daily allowance is counted</h2>
+
+<p>The free tier includes a small number of online translations per day, so
+there has to be some way to count them. When you install LinguaGo it generates a
+random number for itself. It is not your device identifier, not an advertising
+identifier, and matches nothing any other app can see. Deleting LinguaGo
+destroys it.</p>
+
+<p>That number is used only to draw translation credit from our server. It is
+never sent together with the text you are translating: the credit your
+translations spend cannot be traced back to it. What is stored on our server
+therefore cannot say who translated what.</p>
+
+<h2>7. Speech</h2>
+
+<p>Voice and Conversation modes transcribe speech while you talk. Where your
+device and language support on-device transcription, this happens locally. Where
+they do not, the audio is transcribed by the operating system's own speech
+service — Apple's on iPhone and iPad, Google's on Android — under that
+company's privacy policy, not ours. The app asks for microphone and speech
+recognition permission before this can happen, and the resulting text is then
+treated exactly like typed text under sections 3 to 5. Audio is held only for
+the length of the utterance and is never written to disk or sent to us.</p>
+
+<h2>8. Camera and photographs</h2>
+
+<p>Camera mode reads text out of frames as they arrive, on your device, using
+Apple's Vision framework on iPhone and iPad and Google's ML Kit on Android.
+Frames are never written to disk, never uploaded, and never sent to us. Only the
+text that was recognised is translated, under sections 3 to 5. The same applies
+to a photograph you choose from your library.</p>
+
+<h2>9. Documents</h2>
+
+<p>A PDF, Word or PowerPoint file you hand to LinguaGo is opened and read on
+your device. The file itself is never uploaded. Its text is translated under
+sections 3 to 5, and is exempt from the shared cache in section 5 without
+exception — a document is the most sensitive text the app handles and the least
+likely to be useful to anyone else.</p>
+
+<h2>10. What stays on your device</h2>
+
+<ul>
+  <li><strong>Translation history</strong> — kept so you can search what you
+      have translated. Switch it off and nothing is written. It is never sent to
+      us and is never included in iCloud Sync.</li>
+  <li><strong>Saved phrases, flashcards and trips</strong> — yours, on your
+      device, unless you turn on sync.</li>
+  <li><strong>Downloaded language packs</strong> — downloaded from Apple or
+      Google, and owned by the operating system rather than by us.</li>
+  <li><strong>Your settings</strong> — language choices and preferences.</li>
+</ul>
+
+<p>Settings contains a control that deletes all of it at once.</p>
+
+<h2>11. iCloud Sync</h2>
+
+<p>Off unless you turn it on. When on, your trips, saved phrases and flashcards
+are copied to your own iCloud account so a new phone does not start empty. This
+is your iCloud, not our server: we cannot see it. Translation history is never
+included.</p>
+
+<h2>12. Usage and crash reporting</h2>
+
+<p>Both are off unless you turn them on, and neither is a condition of using the
+app.</p>
+
+<ul>
+  <li><strong>Usage counts</strong> send how many times things like a
+      translation or a screen view happened, to our own server. No identifier of
+      any kind is attached, not even a random one, so the counts cannot be tied
+      back to a phone. They never include what you translated or which languages
+      you used.</li>
+  <li><strong>Crash reports</strong> send the error and the code path it
+      happened in, with no identifier. They catch unhandled errors and the fact
+      that a previous launch ended unexpectedly.</li>
+</ul>
+
+<p>Neither goes to a third-party analytics service. There is no analytics SDK in
+the app.</p>
+
+<h2>13. Subscriptions</h2>
+
+<p>Paid plans are handled by RevenueCat, which sits in front of the Apple App
+Store and Google Play. RevenueCat receives purchase events, an anonymous
+identifier it generates itself, and your device and app version. It never
+receives anything you translate. We never see your card: Apple and Google bill
+you and tell us only whether a subscription is active.</p>
+
+<p>On Android, Google Play Billing is used to complete the purchase, under
+Google's own privacy policy.</p>
+
+<h2>14. What we do not do</h2>
+
+<ul>
+  <li>No advertising, and no advertising identifier.</li>
+  <li>No analytics SDK, no tracking pixels, no fingerprinting.</li>
+  <li>No location collection of any kind.</li>
+  <li>No access to your contacts, calendar, or photo library beyond a photograph
+      you explicitly pick.</li>
+  <li>No selling or sharing of personal information, and no "sharing" for
+      cross-context behavioural advertising as those terms are used in
+      California law.</li>
+  <li>No profile of you, because there is no account to attach one to.</li>
+</ul>
+
+<h2>15. Children</h2>
+
+<p>LinguaGo is not directed to children under 13, and we do not knowingly
+collect personal information from them. Because there is no account, we have no
+practical way to identify a child user; if you believe a child has provided us
+with personal information, write to us and we will delete what we can identify.</p>
+
+<h2>16. Security and retention</h2>
+
+<p>Traffic between the app and our server is encrypted in transit. Cached
+phrases under section 5 are stored for a limited period and swept automatically.
+Usage counts and crash reports carry no identifier and are retained only in
+aggregate. Because there is no account, there is no profile to retain and
+nothing to delete on a server when you stop using the app — deleting LinguaGo
+removes everything it kept, and destroys the random number in section 6.</p>
+
+<h2>17. Your rights</h2>
+
+<p>Depending on where you live, you may have rights to access, correct, delete
+or port personal data, to object to or restrict processing, and to complain to a
+supervisory authority. The honest position is that we hold almost nothing that
+could identify you: there is no account, and what is on our server cannot be
+tied back to a person. Write to
+<a href="mailto:support@apsoluts.com">support@apsoluts.com</a> and we will do
+what can be done, and tell you plainly where there is nothing to act on.</p>
+
+<h2>18. International transfers</h2>
+
+<p>Our server and our AI providers are located in the United States. If you use
+LinguaGo from outside the United States, text you translate online is processed
+there. Where required, transfers rely on the European Commission's standard
+contractual clauses or an equivalent mechanism.</p>
+
+<h2>19. Changes</h2>
+
+<p>If this policy changes we will update the date at the top and, for a change
+that materially affects what leaves your device, say so in the app before it
+takes effect.</p>
+
+<footer class="foot">
+  <p>Apex Root Solutions LLC ·
+     <a href="mailto:support@apsoluts.com">support@apsoluts.com</a></p>
+  <nav class="pages">
+    <a href="../">LinguaGo</a>
+    <a href="../terms/">Terms of Use</a>
+    <a href="../support/">Support</a>
+  </nav>
+</footer>
+
+</div>
+</body>
+</html>
