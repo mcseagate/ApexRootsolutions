@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Ascend</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Ascend</p>
+  <h1>Support</h1>
+</header>
+
+<p class="lede">Write to
+<a href="mailto:support@apsoluts.com">support@apsoluts.com</a>. A person reads
+it, during business hours in the US Central time zone.</p>
+
+<div class="panel">
+<p>Every API response carries a request id in the <code>x-request-id</code>
+header, and every failed publish, launch or post shows one in the app. Quoting
+it lets us find the exact event in our logs without guessing.</p>
+</div>
+
+<h2>Common questions</h2>
+
+<h3>A campaign is spending and I want it stopped now</h3>
+<p>Open <em>Campaigns</em> and press the kill switch. Every campaign in the
+workspace is paused on the advertising platform immediately and nothing can be
+activated until an owner releases it. You can also pause a single campaign from
+its launch page. If the platform's own dashboard still shows it running after a
+minute, pause it there too and write to us with the request id — the platform
+is authoritative, Ascend's safeguards are a second line.</p>
+
+<h3>I published a listing change and want it reversed</h3>
+<p>Ascend cannot recall a change the store has already applied. Every publish
+keeps the previous value in the audit log (<em>History</em>): open the entry,
+copy the "before" value into a new draft, approve it and publish it back. On
+Google Play the change is usually live within minutes; on the App Store it goes
+in with your next version submission.</p>
+
+<h3>A post shows "publishing" for a long time, or failed</h3>
+<p>Instagram and TikTok process media asynchronously and can take several
+minutes; Ascend polls until the platform answers. A failure shows the
+platform's own message in the queue. The usual causes are an expired
+authorisation (reconnect on <em>Connections</em>), a format the destination
+doesn't accept via API (the studio warns before you confirm), or media the
+platform rejected. Retry from the queue once the cause is fixed.</p>
+
+<h3>A connection says "needs re-authorisation"</h3>
+<p>Platform tokens expire (Meta after 60 days, LinkedIn after 60 days, Google
+after 6 months of non-use) or lose permissions when someone changes them on the
+platform. Ascend checks daily and warns owners a week ahead. Reconnect from
+<em>Connections</em>; nothing else changes.</p>
+
+<h3>My drafts say "heuristic engine"</h3>
+<p>Ascend falls back from its AI engine to a rule-based one when the workspace's
+monthly AI cap is reached, when the model provider is unavailable, or when no
+model key is configured. The drafts are still grounded in the listing and
+reviews, but plainer. Owners can raise the cap on the <em>Account</em> page.</p>
+
+<h3>How do I export or delete my data?</h3>
+<p>On the <em>Account</em> page: <em>Export my account</em> and, for owners,
+<em>Export this workspace</em> download everything as JSON (credentials are
+never included). <em>Delete workspace</em> and <em>Delete account</em> are
+below them; both ask you to type the name or email to confirm. Deleting a
+workspace revokes connected platform access where the platform allows it and
+removes stored media and data; the audit log of past actions is kept as
+described in the <a href="../privacy/">Privacy Policy</a>. It does not pause live
+campaigns — do that first.</p>
+
+<h3>How do I remove Ascend's access from a platform?</h3>
+<p>Disconnect on <em>Connections</em>, which revokes the token where the platform
+supports it. You can also remove it on the platform's side: Google security
+settings → third-party access; Facebook settings → Business integrations;
+TikTok settings → Security → Manage app permissions; LinkedIn settings →
+Permitted services.</p>
+
+<h3>I'm a reviewer and my review is quoted in someone's workspace</h3>
+<p>Ascend only reads reviews the store already shows to everyone, and quotes
+them only inside drafts the workspace sees. Write to us with the app and the
+text of the review and we will remove the quote.</p>
+
+<footer class="foot">
+  <p>Apex Root Solutions LLC ·
+     <a href="mailto:support@apsoluts.com">support@apsoluts.com</a></p>
+  <nav class="pages">
+    <a href="../">Ascend</a>
+    <a href="../privacy/">Privacy Policy</a>
+    <a href="../terms/">Terms of Service</a>
+  </nav>
+</footer>
+
+</div>
+</body>
+</html>

@@ -32,6 +32,23 @@ is a separate, optional feature, off by default and read-only through Plaid.
 | Terms of Use | https://mcseagate.github.io/ApexRootsolutions/lifeos-finance/terms/ |
 | Support | https://mcseagate.github.io/ApexRootsolutions/lifeos-finance/support/ |
 
+## Ascend
+
+An app-marketing platform (web). Analyses public store listings, drafts
+recommendations, ads and posts, and publishes only after per-item approval.
+
+| Page | URL |
+| --- | --- |
+| Privacy Policy | https://mcseagate.github.io/ApexRootsolutions/ascend/privacy/ |
+| Terms of Service | https://mcseagate.github.io/ApexRootsolutions/ascend/terms/ |
+| Support | https://mcseagate.github.io/ApexRootsolutions/ascend/support/ |
+
+The application also serves the same documents itself at `/legal/privacy` and
+`/legal/terms` (source: `src/app/legal/` in the `martintel` repository, with the
+operator facts in `src/lib/legal.ts`). The two copies must say the same thing:
+edit the app first, then mirror here in the same commit. The DPA and
+sub-processor list live only in the app.
+
 ## Layout
 
 Each product owns a directory, because each collects different things and
