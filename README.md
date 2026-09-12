@@ -32,16 +32,16 @@ is a separate, optional feature, off by default and read-only through Plaid.
 | Terms of Use | https://mcseagate.github.io/ApexRootsolutions/lifeos-finance/terms/ |
 | Support | https://mcseagate.github.io/ApexRootsolutions/lifeos-finance/support/ |
 
-## Ascend
+## AscendFlare
 
 An app-marketing platform (web). Analyses public store listings, drafts
 recommendations, ads and posts, and publishes only after per-item approval.
 
 | Page | URL |
 | --- | --- |
-| Privacy Policy | https://mcseagate.github.io/ApexRootsolutions/ascend/privacy/ |
-| Terms of Service | https://mcseagate.github.io/ApexRootsolutions/ascend/terms/ |
-| Support | https://mcseagate.github.io/ApexRootsolutions/ascend/support/ |
+| Privacy Policy | https://mcseagate.github.io/ApexRootsolutions/ascendflare/privacy/ |
+| Terms of Service | https://mcseagate.github.io/ApexRootsolutions/ascendflare/terms/ |
+| Support | https://mcseagate.github.io/ApexRootsolutions/ascendflare/support/ |
 
 The application also serves the same documents itself at `/legal/privacy` and
 `/legal/terms` (source: `src/app/legal/` in the `martintel` repository, with the
