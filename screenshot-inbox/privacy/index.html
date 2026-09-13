@@ -12,7 +12,7 @@
 <header class="masthead">
   <p class="eyebrow">Screenshot Inbox</p>
   <h1>Privacy Policy</h1>
-  <p class="dates">Effective 6 September 2026 · Last updated 6 September 2026</p>
+  <p class="dates">Effective 6 September 2026 · Last updated 13 September 2026</p>
 </header>
 
 <p class="lede">Screenshot Inbox turns your screenshots into reminders, events,
@@ -23,13 +23,17 @@ actually behaves.</p>
 
 <div class="panel">
 <p><strong>The short version.</strong> No account. No server of ours, anywhere.
-Your screenshots are read on your device by Apple's own on-device text
-recognition, and neither the images nor the text taken out of them are sent to
-us — we have nowhere to send them to. There is no advertising and no analytics
+Your screenshots are read on your device by the platform's own on-device text
+recognition — Apple's Vision framework on iPhone, Google's ML Kit on Android,
+both running entirely on the phone — and neither the images nor the text taken
+out of them are sent to us; we have nowhere to send them to. There is no advertising and no analytics
 service of any kind. Two things can leave your device, both optional and both
 described below: an address you saved, when the app fetches that page's title,
-and your saved items, if you turn on iCloud Sync. Nothing is ever deleted from
-your photo library without you confirming it first.</p>
+and, on iPhone, your saved items if you turn on iCloud Sync. Nothing is ever
+deleted from your photo library without you confirming it first.</p>
+
+<p><strong>This policy covers both the iPhone and the Android app.</strong>
+Where they differ, the difference is stated in the section concerned.</p>
 </div>
 
 <h2>1. Who we are</h2>
@@ -47,13 +51,15 @@ section 12.</p>
 <h2>2. What the app reads</h2>
 
 <p>With your permission, the app reads screenshots from your photo library. It
-looks only at images iOS has marked as screenshots, and ignores your
-photographs. You can also hand it specific images yourself, through the picker
+looks only at images the system has marked as screenshots (on Android, the
+Screenshots folder), and ignores your photographs. You can also hand it specific images yourself, through the picker
 or the share sheet, in which case it reads what you gave it and nothing else.</p>
 
-<p>Reading happens entirely on your device, using Apple's Vision and Natural
-Language frameworks, which are part of iOS. A screenshot is never uploaded for
-processing. There is no cloud processing mode in this version; the setting that
+<p>Reading happens entirely on your device. On iPhone it uses Apple's Vision and
+Natural Language frameworks, which are part of iOS. On Android it uses Google's
+ML Kit text recognition with the recognition models bundled inside the app, so
+nothing is downloaded and no image leaves the phone. A screenshot is never
+uploaded for processing. There is no cloud processing mode in this version; the setting that
 would gate one exists so that nothing can ever change that without you turning
 it on first, and it does nothing today.</p>
 
@@ -104,9 +110,14 @@ It is stored on your device the same as your own.</p>
       your photos are different requests, and the app treats them that way.</li>
 </ul>
 
-<h2>5. iCloud Sync</h2>
+<h2>5. iCloud Sync (iPhone) and backup (Android)</h2>
 
 <p>Off by default. With it off, nothing about your items leaves the device.</p>
+
+<p><em>On Android</em> there is no sync feature. The app's database and settings
+are included in Android's own device backup, which goes to your Google account
+under Google's terms if you have backup turned on; your screenshots and the
+app's image copies are excluded from it. We have no access to that backup.</p>
 
 <p>Turning it on copies your saved items — their titles, notes, extracted text,
 thumbnails, tags, collections and scheduled dates — into <em>your own private
@@ -129,6 +140,11 @@ request does, and is the only outbound request the app makes on its own. It can
 be turned off completely in Settings under "Fetch link previews", and with it
 off the app makes no network request at all.</p>
 
+<p>On Android, when you choose "when I arrive at…" and search for a place, the
+words you type are sent to the device's geocoding service (Google's, on phones
+with Google services) to find that place — the same way the iPhone app sends
+them to Apple Maps. Your own position is not read for that search.</p>
+
 <p>We operate no server for this app. There is no endpoint of ours for the app
 to talk to.</p>
 
@@ -147,17 +163,19 @@ Contacts and Calendar; it does not copy them.</p>
 <h2>8. Location</h2>
 
 <p>Only used for reminders you set up yourself. If you ask to be reminded about a
-screenshot when you arrive somewhere, the app asks iOS to watch for that one
-place, and iOS tells it when you arrive. Your location is never recorded, never
+screenshot when you arrive somewhere, the app asks the system to watch for that
+one place, and the system tells it when you arrive (on iPhone through iOS
+region monitoring; on Android through Google Play services geofencing, which
+needs the "allow all the time" location permission for exactly this reason). Your location is never recorded, never
 stored, and never sent anywhere. The app does not track your movement, does not
 start continuous location updates, and keeps background location updates
 disabled. Remove the reminder and the app stops watching for that place.</p>
 
 <h2>9. Device search</h2>
 
-<p>Saved items are added to your iPhone's own search index so you can find them
-from the Home Screen. That index is created and held by iOS on your device and is
-not sent to us. Anything the app has flagged as sensitive is left out of it
+<p>Saved items are added to your phone's own search index so you can find them
+from the Home Screen (Spotlight on iPhone, AppSearch on Android). That index is
+created and held by the system on your device and is not sent to us. Anything the app has flagged as sensitive is left out of it
 whatever your setting says, because search results can appear on a Lock Screen.
 You can turn indexing off entirely in Settings, which withdraws everything the
 app has published to it.</p>
@@ -199,10 +217,9 @@ it.</p>
 <h2>13. Security and retention</h2>
 
 <p>The app's database and the images it stores are held in your device's
-app storage and protected by iOS file protection, which keeps them encrypted
-while the device is locked. You can additionally require Face ID, Touch ID or
-your passcode to open the app, and have it hide its contents in the app
-switcher.</p>
+app storage and protected by the platform's file encryption. You can
+additionally require Face ID, Touch ID, fingerprint or your passcode to open
+the app, and have it hide its contents in the app switcher.</p>
 
 <p>We retain nothing, because we receive nothing. Your data lives for as long as
 you keep it on your device, plus whatever you have chosen to copy to your own
