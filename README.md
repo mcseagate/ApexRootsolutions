@@ -49,6 +49,23 @@ operator facts in `src/lib/legal.ts`). The two copies must say the same thing:
 edit the app first, then mirror here in the same commit. The DPA and
 sub-processor list live only in the app.
 
+## QuoteShield
+
+A private, on-device record-keeper for a home improvement project: quotes,
+agreement, payments, change orders, milestones, punch list, warranties and a
+factual dispute timeline. No account, no analytics, no network use except the
+store's own purchase check. App repo: https://github.com/mcseagate/QuoteShield.
+
+| Page | URL |
+| --- | --- |
+| Privacy Policy | https://mcseagate.github.io/ApexRootsolutions/quoteshield/privacy/ |
+| Terms of Use | https://mcseagate.github.io/ApexRootsolutions/quoteshield/terms/ |
+| Support | https://mcseagate.github.io/ApexRootsolutions/quoteshield/support/ |
+
+The same values are baked into the app: `QSPublishedLinks` in
+`ios/QuoteShield/project.yml` and `BuildConfig` fields in
+`android/quoteshield/app/build.gradle.kts`. Change them together.
+
 ## Layout
 
 Each product owns a directory, because each collects different things and
@@ -61,6 +78,8 @@ style.css                        shared by every page
 berean-scroll/
   index.html  privacy/  terms/  support/
 lifeos-finance/
+  index.html  privacy/  terms/  support/
+quoteshield/
   index.html  privacy/  terms/  support/
 ```
 
