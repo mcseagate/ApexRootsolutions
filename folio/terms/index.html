@@ -12,18 +12,20 @@
 <header class="masthead">
   <p class="eyebrow">Folio</p>
   <h1>Terms of Use</h1>
-  <p class="dates">Effective 15 September 2026</p>
+  <p class="dates">Effective 25 September 2026 · replaces the version of 15 September 2026</p>
 </header>
 
 <p class="lede">These terms govern your use of Folio. By using the app you agree
 to them. If you do not agree, do not use the app.</p>
 
 <div class="panel">
-<p><strong>The two that matter most.</strong> Folio writes a <em>new</em> PDF
+<p><strong>The three that matter most.</strong> Folio writes a <em>new</em> PDF
 when you export; it never changes the file you opened, so keep that original
-until you have checked the export. And a signature placed in Folio is a
-picture, not a certified digital signature — whether it is legally sufficient
-depends on the law and the parties, not on the app.</p>
+until you have checked the export. A signature placed in Folio is a picture,
+not a certified digital signature — whether it is legally sufficient depends on
+the law and the parties, not on the app. And a password you set on an exported
+file cannot be recovered by us or by the app: if you lose it, that file is
+lost.</p>
 </div>
 
 <h2>1. Who you are contracting with</h2>
@@ -54,12 +56,43 @@ Licence and remain under that licence.</p>
 
 <p>Folio renders and edits PDF documents on your device and exports a new PDF.
 PDF is a large and irregular format; the app validates a file before opening
-it, refuses encrypted files, warns you about things it cannot reproduce
-faithfully, and verifies that an export reopens before reporting success. Even
-so, we cannot promise that every document will render, edit or export
-identically to another application, that form fields, fonts or annotations from
-every producer will survive, or that the output will meet a particular
-standard such as PDF/A. Check an exported file before you rely on it.</p>
+it, warns you about things it cannot reproduce faithfully, and verifies that an
+export reopens before reporting success. Even so, we cannot promise that every
+document will render, edit or export identically to another application, that
+form fields, fonts or annotations from every producer will survive, or that the
+output will meet a particular standard such as PDF/A. Check an exported file
+before you rely on it.</p>
+
+<p>Four features deserve their own statement, because what they can and cannot
+do is easy to assume wrongly.</p>
+
+<p><strong>Editing existing text</strong> rewrites the page's own text using the
+font already embedded in the document. A font that does not contain a character
+you typed is reported rather than silently replaced, and some text cannot be
+edited at all. Reflowing a document, as a word processor does, is not something
+Folio attempts.</p>
+
+<p><strong>Redaction</strong> deletes content from the file rather than covering
+it: the marked text is removed from the page's content stream, and an image or
+form that overlaps the marked area is removed entirely. Before you rely on it
+for a document you are handing to someone else, check the exported file
+yourself. Redaction acts on the page content you marked; it does not search the
+document for the same information elsewhere, and it does not rewrite metadata,
+attachments or an earlier version of the file that another tool may have left
+inside it. A shape you draw over text is not redaction, and the app says so.</p>
+
+<p><strong>Recognising text on a scan</strong> produces a best-effort
+transcription and adds it as an invisible layer so the page can be searched and
+copied. Recognition makes mistakes, particularly with handwriting, poor scans,
+tables and unusual type. The recognised text is not evidence of what the page
+says; the image is. Do not rely on it where accuracy matters without checking
+it.</p>
+
+<p><strong>Converting to Word or Excel</strong> produces a new document, not a
+copy of the original. Text, its styling and its reading order carry over and
+tables become real tables, but page layout, images, drawings, annotations, form
+fields and exact positioning do not. Export a PDF when the document has to look
+as it does now.</p>
 
 <h2>5. Your documents</h2>
 
@@ -69,7 +102,35 @@ file you opened; an export is a new file that you choose where to save. The
 optional draft-recovery feature keeps a working copy on your device only, and
 only when you have turned it on. We have no access to any of it.</p>
 
-<h2>6. Signatures</h2>
+<h2>6. Password-protected files</h2>
+
+<p>Folio opens a protected PDF when you supply a password that the file itself
+accepts, and can put a password on a file you export. Three things follow from
+that, and you accept them by using the feature.</p>
+
+<p><strong>We cannot recover a password.</strong> Not one you set on an export,
+and not one on a file you have been given. The app authenticates a password
+against the file; it does not break, guess or bypass protection, and we cannot
+do so on your behalf. A protected file whose password is lost is, for our
+purposes, unrecoverable.</p>
+
+<p><strong>Permissions are a request, not a lock.</strong> When you allow or
+disallow printing, copying or editing on an exported file, that setting is
+written into the file as the PDF format defines it. Most readers honour it.
+Nothing in the format compels them to, and a determined tool need not. Do not
+treat those settings as security.</p>
+
+<p><strong>Opening a protected file decrypts your working copy.</strong> Folio
+does not strip protection from a file you export — an export without a password
+is something you choose, and the app warns you when the original was protected —
+but while you are working, the copy in the app is decrypted, and a saved draft
+of it is decrypted too. The Privacy Policy explains where that draft lives and
+how to delete it.</p>
+
+<p>You are responsible for having the right to open a protected document you
+supply a password for.</p>
+
+<h2>7. Signatures</h2>
 
 <p>The signature tool places an image on the page. It does not apply a
 cryptographic digital signature, does not verify identity and does not create a
@@ -77,18 +138,20 @@ certified document. Whether an image signature is valid for a given purpose is
 a question of law and of the agreement between the parties. Do not use Folio
 where a certified digital signature is required.</p>
 
-<h2>7. Acceptable use</h2>
+<h2>8. Acceptable use</h2>
 
 <p>You may not use the app to forge, alter or misrepresent a document with
-intent to deceive, to infringe anyone's rights, or in breach of any law.</p>
+intent to deceive, to infringe anyone's rights, or in breach of any law. You may
+not use it to open, decrypt or remove protection from a document you have no
+right to open, whatever password you have.</p>
 
-<h2>8. Price</h2>
+<h2>9. Price</h2>
 
 <p>Folio is currently free of charge and contains no purchases. If we introduce
 paid features we will say so in the app and update these terms before any
 charge applies.</p>
 
-<h2>9. Availability and changes</h2>
+<h2>10. Availability and changes</h2>
 
 <p>We may change, suspend or discontinue the app or any feature at any time.
 Because the app works entirely on your device, a version you have installed
@@ -96,13 +159,13 @@ keeps working as it is regardless of what we do afterwards, subject to the
 platform it runs on. We may update these terms; the date at the top says when.
 Continuing to use the app after a change means you accept it.</p>
 
-<h2>10. Ending this agreement</h2>
+<h2>11. Ending this agreement</h2>
 
 <p>You may stop at any time by deleting the app or clearing the site's data in
 your browser. We may end your licence if you materially breach these terms.
-Sections 4, 6, 11, 12, 13 and 14 survive the end of this agreement.</p>
+Sections 4, 6, 7, 12, 13, 14 and 15 survive the end of this agreement.</p>
 
-<h2>11. Disclaimers</h2>
+<h2>12. Disclaimers</h2>
 
 <p>The app is provided "as is" and "as available". To the fullest extent
 permitted by law, we disclaim all warranties, express or implied, including
@@ -112,7 +175,7 @@ error-free, that any document will render or export correctly, or that it will
 meet your requirements. Some jurisdictions do not allow the exclusion of certain
 warranties, so parts of this section may not apply to you.</p>
 
-<h2>12. Limitation of liability</h2>
+<h2>13. Limitation of liability</h2>
 
 <p>To the fullest extent permitted by law, we are not liable for indirect,
 incidental, special, consequential, exemplary or punitive damages, or for lost
@@ -128,14 +191,14 @@ or twenty-five United States dollars.</p>
 <p>Nothing here excludes liability that cannot lawfully be excluded, including
 for death or personal injury caused by negligence, or for fraud.</p>
 
-<h2>13. Indemnity</h2>
+<h2>14. Indemnity</h2>
 
 <p>You will indemnify and hold us harmless from claims, losses and reasonable
 legal costs arising out of your misuse of the app, your breach of these terms,
 or your infringement of anyone's rights — including in documents you edited
 with it.</p>
 
-<h2>14. Governing law</h2>
+<h2>15. Governing law</h2>
 
 <p>These terms are governed by the laws of the State of Texas, without regard
 to its conflict-of-laws rules. You and we submit to the exclusive jurisdiction
@@ -144,7 +207,7 @@ consumer, this does not deprive you of the protection of mandatory laws of the
 country where you live, or of the right to bring proceedings there where such a
 right cannot be waived.</p>
 
-<h2>15. Apple and Google</h2>
+<h2>16. Apple and Google</h2>
 
 <p>If you installed the app from Google Play, this agreement is between you and
 us, not with Google; Google is not responsible for the app or its content and
@@ -166,7 +229,7 @@ You confirm that you are not located in a country subject to a United States
 embargo or designated as terrorist-supporting, and that you are not on any
 United States list of prohibited or restricted parties.</p>
 
-<h2>16. General</h2>
+<h2>17. General</h2>
 
 <p>These terms, with the <a href="../privacy/">Privacy Policy</a>, are the
 whole agreement between us about the app. If a provision is unenforceable, the

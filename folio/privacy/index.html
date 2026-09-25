@@ -12,7 +12,7 @@
 <header class="masthead">
   <p class="eyebrow">Folio</p>
   <h1>Privacy Policy</h1>
-  <p class="dates">Effective 15 September 2026</p>
+  <p class="dates">Effective 25 September 2026 · replaces the version of 15 September 2026</p>
 </header>
 
 <p class="lede">Folio edits PDF documents on your device. This policy explains
@@ -26,7 +26,8 @@ make and the files you export exist only where you put them. There is no
 advertising, no analytics and no crash reporting. The one optional thing the
 app stores for itself — a recoverable draft of the document you are working on
 — is off by default, lives on your device, and is deleted when you delete it or
-the app.</p>
+the app. Recognising text on a scan and converting a document to Word or Excel
+also happen on the device, with no service behind them.</p>
 
 <p><strong>This policy covers the iPhone app, the Android app and the web app
 at the same address.</strong> Where they differ, the difference is stated in
@@ -50,9 +51,21 @@ system file picker, the share sheet, drag and drop, or the photo picker when
 you insert a picture. It reads what you gave it and nothing else. It does not
 scan your files, your photo library or your storage on its own.</p>
 
-<p>It checks a file's contents to confirm it really is a PDF, and it refuses
-encrypted PDFs rather than asking for a password, because it has no way to
-handle one safely.</p>
+<p>It checks a file's contents to confirm it really is a PDF.</p>
+
+<p><strong>Password-protected files.</strong> If a file is protected, Folio asks
+you for its password and uses it to decrypt the document in memory so the rest
+of the app can work on it. The file on your disk is never changed. The password
+is checked against the file's own verifier — it is never guessed, recovered or
+sent anywhere — and it is discarded as soon as the file is open. We never store
+it, it is never written into a saved draft, and it is never written into a file
+you export unless you ask for protection there as well.</p>
+
+<p>One consequence is worth stating plainly: once a protected file is open, the
+copy Folio is working on is decrypted. If you have turned draft recovery on (see
+section 4), the draft it saves on your device contains that decrypted copy, and
+it can be recovered without the password until you delete it. If that matters
+for a particular document, leave draft recovery off while you work on it.</p>
 
 <h2>3. Where the work happens</h2>
 
@@ -62,10 +75,22 @@ browser), edits are held in memory, and the exported PDF is written by a library
 running locally. On the web the export runs in a worker inside your browser
 tab.</p>
 
+<p><strong>Recognising text on a scan (OCR)</strong> also runs on the device,
+and so does the model it uses: Apple's Vision framework on iPhone, ML Kit
+bundled inside the APK on Android — not fetched from Google Play services — and
+Tesseract compiled to WebAssembly on the web, served from the same address as
+the app. The page is rasterised in memory, recognised, and the words are written
+back into the document as an invisible text layer. No image of your page is sent
+anywhere.</p>
+
+<p><strong>Converting to Word or Excel</strong> builds the .docx or .xlsx file
+on the device from the text the document already contains. There is no
+conversion service.</p>
+
 <p>The Android app does not request the Internet permission at all. The iPhone
-app contains no networking code. The web app loads its own code and bundled
-fonts from the address you opened it at and makes no other request; once loaded
-it works offline.</p>
+app contains no networking code. The web app loads its own code, bundled fonts
+and recognition model from the address you opened it at and makes no other
+request; once loaded it works offline.</p>
 
 <h2>4. What the app stores</h2>
 
@@ -81,6 +106,10 @@ it works offline.</p>
       this site. A draft is readable only by Folio on that device. You can
       delete any draft, or all of them, in Settings, and they disappear with the
       app or with your browser's site data.</li>
+  <li><strong>Passwords</strong> — never stored. A password you type to open a
+      protected file is used and discarded; a password you set on an export is
+      used to encrypt that file and then forgotten. We cannot recover either one
+      for you, and neither can the app.</li>
   <li><strong>Exported files</strong> — go wherever you save or share them.
       That is your storage, your Files app or the app you shared to, not ours.</li>
 </ul>

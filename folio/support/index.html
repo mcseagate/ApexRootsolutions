@@ -35,9 +35,44 @@ you opened is untouched.</p>
 
 <h3>It will not open my PDF.</h3>
 <p>Folio checks the contents of a file, not its name, so a file that is not
-really a PDF is refused. It also refuses encrypted or password-protected PDFs
-rather than trying to unlock them. Remove the password in the application that
-set it, then open the result.</p>
+really a PDF is refused. A damaged file may also be refused, with the reason
+given.</p>
+
+<h3>It is asking for a password.</h3>
+<p>The file is protected, and Folio needs the password that opens it — either
+the one for opening or the owner's password. It checks what you type against
+the file itself; it cannot recover, guess or bypass a password, and neither can
+we. The password is used to open the document and then discarded: it is never
+stored, never saved with a draft, and never written into a file you export
+unless you ask for protection there too. A file protected with a certificate
+rather than a password needs the tool that issued the certificate.</p>
+
+<h3>Can I put a password on a file I export?</h3>
+<p>Yes — Protection in the export dialog. You can set the password that opens
+the file, an owner password, and what a reader may do without it. The file is
+encrypted with AES-256. Keep the password somewhere safe: if you lose it, we
+cannot get the file back for you. Exporting a document that arrived protected
+without setting a new password is allowed, but the app warns you first, because
+the result is open to anyone.</p>
+
+<h3>Is redaction really permanent?</h3>
+<p>The marked text is deleted from the page rather than covered, and an image or
+form overlapping the marked area is removed with it. It acts on what you marked
+on the page; it does not hunt for the same information elsewhere in the
+document. Check the exported file before you hand it to anyone.</p>
+
+<h3>The recognised text on my scan is wrong.</h3>
+<p>Recognition runs on your device and does its best with the image it is given.
+Handwriting, faint or skewed scans, tables and unusual type all cost accuracy.
+The invisible text layer exists so the page can be searched and copied — the
+image is still what the page says.</p>
+
+<h3>My Word or Excel file does not look like the PDF.</h3>
+<p>It is not meant to. A conversion carries the text, its styling and its
+reading order, and turns detected tables into real ones; the page layout,
+images, drawings, annotations and exact positions stay behind. Export a PDF when
+the document has to look as it does now. A scanned page contributes nothing
+until you have run recognition on it.</p>
 
 <h3>Something looks different after export.</h3>
 <p>The review step before export lists anything the app could not reproduce
