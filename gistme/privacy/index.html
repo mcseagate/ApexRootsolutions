@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — GistMe</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">GistMe</p>
+  <h1>Privacy Policy</h1>
+  <p class="dates">DRAFT — effective on publication · Drafted 1 October 2026</p>
+</header>
+
+<p class="lede">GistMe is a voice-calling app for one-to-one calls, designed to work on weak and expensive connections,
+published by Apex Root Solutions LLC. This policy describes what the app and its servers actually do with your
+information.</p>
+
+<div class="panel">
+<p><strong>The short version.</strong> We do not record or store your calls. Call audio travels directly between the two
+phones, or through a relay that only forwards encrypted data. We never read your address book, location or advertising
+ID. We keep an account (username, display name), your contacts and a short call log so the app works. There is no
+advertising and no third-party analytics.</p>
+</div>
+
+<h2>1. Who we are</h2>
+<p>GistMe is published by Apex Root Solutions LLC ("we", "us"), a limited liability company organised under the laws of the State of Delaware, with
+its registered office in Wilmington, New Castle County, Delaware, and its principal
+place of business in Cedar Hill, Dallas County, Texas. We are the controller of the personal data described here. Contact:
+<a href="mailto:support@apsoluts.com">support@apsoluts.com</a>.</p>
+
+<h2>2. What we collect and why</h2>
+<table>
+<tr><th>Data</th><th>Why</th><th>Kept</th></tr>
+<tr><td>Username, display name, password (stored only as an Argon2id hash), recovery code (stored only as a hash)</td><td>To run your account and sign you in</td><td>Until you delete the account</td></tr>
+<tr><td>Contacts, contact requests, invite links, blocks</td><td>Calls are allowed only between people who are contacts; blocks stop unwanted calls</td><td>Until removed or the account is deleted</td></tr>
+<tr><td>Call log: who, when, how long, outcome (completed, missed, declined…), audio mode</td><td>To show your history and missed calls, and to prevent abuse</td><td>90 days, then deleted. You can delete entries earlier.</td></tr>
+<tr><td>Device name and platform, refresh-token hash, last-used time, push token</td><td>To keep you signed in on each device and to wake your phone for an incoming call</td><td>Until you sign out of that device or delete the account</td></tr>
+<tr><td>Network addresses (IP) when you connect</td><td>To deliver signaling and relayed media, enforce rate limits and stop abuse. The relay also sees addresses; relayed calls hide each person's IP from the other.</td><td>Operational logs, truncated, up to 30 days</td></tr>
+<tr><td>Reports you file (reason, optional note, call metadata)</td><td>To act on abuse</td><td>365 days</td></tr>
+<tr><td>Optional call-quality summary (relayed or direct, setup time, average delay, loss %, platform)</td><td>To improve reliability. <strong>Off by default;</strong> only sent if you turn it on in Settings.</td><td>30 days</td></tr>
+</table>
+
+<h2>3. What we do not collect</h2>
+<ul>
+<li>Call audio — we do not record it and it never reaches our application servers.</li>
+<li>Your address book or phone number, your location, advertising identifiers, or the contents of any call.</li>
+<li>Third-party analytics, advertising or crash-reporting data. The app contains no such SDKs.</li>
+</ul>
+
+<h2>4. How calls work, and who can see what</h2>
+<p>Call setup messages (who is calling, connection details) go to our servers over an encrypted connection. Audio is
+encrypted with DTLS-SRTP and sent directly to the other phone when possible; otherwise it passes through a relay
+server that forwards encrypted data it cannot decrypt. When a call is direct, the other person's phone can learn your
+IP address; turn on <em>Always relay my calls</em> in Settings to prevent that.</p>
+<p>The encryption protects call audio between the two phones. Because the connection details that authenticate the two
+phones pass through our servers, GistMe does not claim end-to-end encryption with verified identities. You can compare the
+<em>security code</em> shown during the call with the other person to confirm that nobody is in the middle.</p>
+
+<h2>5. Who we share data with</h2>
+<ul>
+<li><strong>Apple (APNs) and Google (Firebase Cloud Messaging)</strong> deliver the wake-up notification for incoming calls. They receive your device's push token and an opaque notification, not call content.</li>
+<li><strong>Hosting and relay providers</strong> that run our servers process data on our behalf under contract.</li>
+<li>Authorities, where required by law or to protect safety. We cannot hand over call audio because we do not have it.</li>
+</ul>
+<p>We do not sell personal data.</p>
+
+<h2>6. Security</h2>
+<p>Connections use TLS; credentials are held in the iOS Keychain or Android Keystore; passwords are hashed with Argon2id;
+we rate-limit sign-in, lookups, invites and call attempts. No system is perfectly secure.</p>
+
+<h2>7. Your choices and rights</h2>
+<ul>
+<li><strong>Delete your account</strong> in Settings → Account. This deletes your profile, contacts, invites and sessions; other people's call logs show "Deleted user".</li>
+<li>Delete call history entries, sign out of devices, change your password, block and report people.</li>
+<li>Ask for access, correction or deletion of data we hold by writing to <a href="mailto:support@apsoluts.com">support@apsoluts.com</a>. Depending on where you live you may have additional rights, which we honour.</li>
+</ul>
+<p><strong>Lost password:</strong> because we do not collect an email address or phone number, a lost password and lost recovery code cannot be recovered. Keep your recovery code safe.</p>
+
+<h2>8. Children</h2>
+<p>GistMe is not directed to children under 13 and we do not knowingly collect their information. Do not use GistMe if you are under 13 (or the minimum age in your country).</p>
+
+<h2>9. Data costs and connectivity</h2>
+<p>Calls use your Wi-Fi or mobile data. GistMe is designed to use little data but cannot make calls without an internet connection. The app shows an estimate of each call's data use and explains how it is measured.</p>
+
+<h2>10. Changes</h2>
+<p>If we change this policy in a way that matters, we will tell you in the app before it takes effect.</p>
+
+<footer>
+<p>Apex Root Solutions LLC · <a href="mailto:support@apsoluts.com">support@apsoluts.com</a></p>
+</footer>
+</div>
+</body>
+</html>
