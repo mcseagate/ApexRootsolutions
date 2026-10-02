@@ -43,6 +43,7 @@ place of business in Cedar Hill, Dallas County, Texas. We are the controller of 
 <tr><td>Reports you file (reason, optional note, call metadata)</td><td>To act on abuse</td><td>365 days</td></tr>
 <tr><td>Optional call-quality summary (relayed or direct, setup time, average delay, loss %, platform)</td><td>To improve reliability. <strong>Off by default;</strong> only sent if you turn it on in Settings.</td><td>30 days</td></tr>
 </table>
+<p><strong>When you delete your account</strong> (Settings → Account → Delete account), your account, devices, push tokens, contacts, requests, invite links and blocks are deleted immediately. Calls you took part in stay in the other person's call log (for up to 90 days) as "Deleted user", no longer linked to any account, and reports filed by or about you are kept unlinked for up to 365 days. <strong>Backups:</strong> we keep encrypted database backups for up to 30 days, so deleted data can remain in a backup for up to 30 days after deletion. If we ever have to restore from a backup, accounts deleted after it was taken would come back with it; we delete them again as soon as we can.</p>
 
 <h2>3. What we do not collect</h2>
 <ul>
@@ -62,7 +63,7 @@ phones pass through our servers, GistMe does not claim end-to-end encryption wit
 
 <h2>5. Who we share data with</h2>
 <ul>
-<li><strong>Apple (APNs) and Google (Firebase Cloud Messaging)</strong> deliver the wake-up notification for incoming calls. They receive your device's push token and an opaque notification, not call content.</li>
+<li><strong>Apple (APNs) and Google (Firebase Cloud Messaging)</strong> deliver the wake-up notification for incoming calls. They receive the recipient's device push token and the wake-up message itself, which contains the caller's display name and username and a call identifier (your phone needs the name to show who is calling), and they can see when it was sent. They do not receive call audio, and the message contains no call set-up data.</li>
 <li><strong>Hosting and relay providers</strong> that run our servers process data on our behalf under contract.</li>
 <li>Authorities, where required by law or to protect safety. We cannot hand over call audio because we do not have it.</li>
 </ul>
