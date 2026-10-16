@@ -12,7 +12,7 @@
 <header class="masthead">
   <p class="eyebrow">Berean Scroll</p>
   <h1>Privacy Policy</h1>
-  <p class="dates">Effective 5 September 2026 · Last updated 5 September 2026</p>
+  <p class="dates">Effective [on publication] · Last updated [on publication]</p>
 </header>
 
 <p class="lede">Berean Scroll is a Bible reading and study app published by Apex
@@ -89,9 +89,21 @@ assistant, downloading new editions, communities, and signing in.</p>
 <tbody>
 <tr>
   <td>Account</td>
-  <td>Email address and password</td>
-  <td>Your email address and a cryptographic hash of your password. We never
-      store the password itself.</td>
+  <td>Email address, password, your age band (13 to 17, or 18 and over), and
+      that you accepted the Terms of Use</td>
+  <td>Your email address, a cryptographic hash of your password (never the
+      password itself), a random handle we generate (such as
+      <em>berean-k7m2qx</em>, which other members see instead of your email), a
+      display name if you set one, your age band, whether your email is
+      verified, which version of the Terms you accepted and when, and your plan.
+      For each signed-in device, a session record with a device label and when it
+      was last used.</td>
+</tr>
+<tr>
+  <td>Account emails</td>
+  <td>Your email address, when you register or ask to reset your password</td>
+  <td>A one-time link, stored only as a hash, which expires. The email is
+      delivered by Resend on our behalf.</td>
 </tr>
 <tr>
   <td>Syncing</td>
@@ -105,19 +117,42 @@ assistant, downloading new editions, communities, and signing in.</p>
   <td>Your question, the mode you chose, and the passage text and references the
       app selected to ground the answer</td>
   <td><strong>Nothing.</strong> The question and its sources build one request and
-      are not stored. Only a per-day count of questions asked survives, so that
-      free-tier limits can be enforced.</td>
+      are not stored by us. Only a per-day count of questions asked survives, so that
+      free-tier limits can be enforced. Google, which answers it, keeps it briefly
+      (below).</td>
 </tr>
 <tr>
-  <td>Communities</td>
-  <td>What you post, comment or share into a community</td>
-  <td>Stored and shown to the members of that community, under its moderators.</td>
+  <td>Communities and courses</td>
+  <td>What you post, comment, share or submit; the communities and courses you
+      join; your lesson progress</td>
+  <td>Stored and shown to the members of that community or course, under its
+      moderators and teachers.</td>
+</tr>
+<tr>
+  <td>Reports and blocks</td>
+  <td>A report you make about a post or comment, with the reason you give; a
+      member you block</td>
+  <td>Kept so the report can be reviewed and acted on, with a record of how it
+      was resolved; a block is kept until you remove it.</td>
+</tr>
+<tr>
+  <td>Subscriptions</td>
+  <td>When you buy or restore a plan: the store's record of the purchase. Apple
+      or Google also tell our server directly when a subscription renews, lapses
+      or is refunded.</td>
+  <td>Which plan you hold, the product, its expiry and its status, linked to your
+      account. We never receive your card or bank details; the store takes
+      payment.</td>
 </tr>
 <tr>
   <td>Downloading resources</td>
-  <td>A request for the catalogue and for the files you choose</td>
+  <td>A request for the catalogue and for the files you choose, and the country
+      of your app store account</td>
   <td>Ordinary web server logs, including IP address, kept briefly for security
-      and reliability.</td>
+      and reliability. The country (from your app store account, or from your
+      network address) is used only to leave out editions that may not be
+      supplied there, such as the King James Version in the United Kingdom, and is
+      not stored.</td>
 </tr>
 </tbody>
 </table>
@@ -127,13 +162,37 @@ assistant, downloading new editions, communities, and signing in.</p>
 
 <p>When you ask the assistant a question, it is sent to our server, which adds
 the passages the answer must be grounded in and forwards the request to Google's
-Gemini API. Google processes it under its own terms as our processor. We do not
+Gemini API. We use Google's paid service, under which Google does not use your
+question or its answer to improve its products. Google logs requests and responses
+for a limited period, solely to detect and prevent abuse of its service and for any
+disclosure the law requires; it does not publish how long that period is. We do not
 send your notes, your prayer journal, your identity, or anything else you have
-not asked about.</p>
+not asked about. Do not put anything in a question you would not want held by
+Google for that period.</p>
+
+<p>The assistant is available only to accounts whose holder has said they are
+18 or over. Google's terms do not allow the Gemini API to be used by people under
+18.</p>
 
 <p>Answers are labelled as AI-generated throughout the app. The assistant is a
 research aid and is not Scripture, a pastor, or a doctrinal authority; see the
 Terms of Use.</p>
+
+<h3>Who handles data for us</h3>
+
+<p>We use these service providers, each only for the purpose given, under
+contract and as our processors:</p>
+<ul>
+  <li><strong>Render</strong> (United States, Oregon): runs our server and its
+      database, where everything in the table above is kept.</li>
+  <li><strong>Cloudflare</strong> (worldwide network): delivers the downloadable
+      editions and resources, and protects the server.</li>
+  <li><strong>Resend</strong> (United States): sends account emails.</li>
+  <li><strong>Google</strong>: the Gemini API answers assistant questions; Google
+      Play handles purchases on Android.</li>
+  <li><strong>Apple</strong>: the App Store handles purchases on iPhone and iPad.</li>
+</ul>
+<p>We will name any new provider here before it receives anything.</p>
 
 <h2>5. What we do not do</h2>
 
@@ -164,7 +223,8 @@ enrols minors in a course or community, that institution is responsible for
 obtaining the consent its own law requires, and acts as controller for the
 student records it creates. If you believe a child has given us personal data,
 write to <a href="mailto:support@apsoluts.com">support@apsoluts.com</a> and we
-will delete it.</p>
+will delete it. Accounts for people aged 13 to 17 do not have the AI assistant, and
+are not listed for members outside the communities they join.</p>
 
 <h2>8. Security and retention</h2>
 
@@ -174,9 +234,11 @@ Android Keystore-backed store.</p>
 
 <p>We keep account data for as long as the account exists. Synced study material
 is kept until you delete it or delete your account. Community posts remain
-visible to their community until deleted by you or a moderator. Server logs are
-kept briefly. AI questions are not retained at all; the per-day counter is kept
-only as long as it is needed to enforce a daily limit.</p>
+visible to their community until deleted by you or a moderator. Reports are kept
+for as long as the community exists, so that repeated abuse can be recognised. Server logs are
+kept briefly. We do not retain AI questions; Google keeps them for the limited
+period described in section 4. The per-day counter is kept only as long as it is
+needed to enforce a daily limit.</p>
 
 <p>No system is perfectly secure, and we do not claim otherwise. Turning sending
 off stops the app transmitting; it does not encrypt your device or protect
@@ -184,15 +246,20 @@ anything if your unlocked phone is in someone else's hand.</p>
 
 <h2>9. Your rights</h2>
 
-<p>You can access, correct, export and delete your data. Much of this is in the
-app: export your work from the Library, and delete any note, highlight or entry
-directly. To delete your account and everything synced with it, write to
+<p>You can access, correct, export and delete your data, and most of it is in
+the app. Export your work from the Library, and delete any note, highlight or
+entry directly. Under <em>Library → Account</em>, <em>Export my data</em> gives you
+a copy of everything held against your account, and <em>Delete my account</em>
+deletes it. <a href="../delete-account/">Deleting your account</a> explains
+exactly what is removed and what is kept, and how to ask us if you can no longer
+use the app. You can also write to
 <a href="mailto:support@apsoluts.com">support@apsoluts.com</a>.</p>
 
 <p>Depending on where you live, you may also have the right to object to or
 restrict processing, to data portability, and to complain to a supervisory
 authority. If you are in the European Economic Area or the United Kingdom, our
-legal bases are: performance of a contract (your account, syncing, communities),
+legal bases are: performance of a contract (your account, syncing, communities,
+subscriptions),
 legitimate interests (security, reliability, preventing abuse), and consent
 where we ask for it. We do not sell personal information or share it for
 cross-context behavioural advertising as those terms are used in California law.</p>
