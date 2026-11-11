@@ -12,7 +12,7 @@
 <header class="masthead">
   <p class="eyebrow">Berean Scroll</p>
   <h1>Privacy Policy</h1>
-  <p class="dates">Effective 16 October 2026 · Last updated 17 October 2026</p>
+  <p class="dates">Effective 16 October 2026 · Last updated 11 November 2026</p>
 </header>
 
 <p class="lede">Berean Scroll is a Bible reading and study app published by Apex
@@ -117,10 +117,10 @@ assistant, downloading new editions, communities, and signing in.</p>
   <td>Your question, the mode you chose, and the passage text and references the
       app selected to ground the answer. For the drafting tools, what you ask them
       to work on (below)</td>
-  <td><strong>Nothing.</strong> The question and its sources build one request and
-      are not stored by us. Only a per-day count of questions asked survives, so that
-      free-tier limits can be enforced. Google, which answers it, keeps it briefly
-      (below).</td>
+  <td><strong>Nothing of what you asked.</strong> The question and its sources build one request and
+      are not stored by us. What is kept is the AI credit it cost: how much of each month's credit an
+      account has spent, and a ledger of top-ups and spending (amounts and dates). Anthropic, which
+      answers it, keeps the request briefly (below).</td>
 </tr>
 <tr>
   <td>Communities and courses</td>
@@ -140,10 +140,11 @@ assistant, downloading new editions, communities, and signing in.</p>
   <td>Subscriptions</td>
   <td>When you buy or restore a plan: the store's record of the purchase. Apple
       or Google also tell our server directly when a subscription renews, lapses
-      or is refunded.</td>
+      or is refunded. When you buy an AI credit top-up, the store's record of that
+      purchase.</td>
   <td>Which plan you hold, the product, its expiry and its status, linked to your
       account. We never receive your card or bank details; the store takes
-      payment.</td>
+      payment. Top-ups are recorded as credit added to your account.</td>
 </tr>
 <tr>
   <td>Downloading resources</td>
@@ -162,19 +163,25 @@ assistant, downloading new editions, communities, and signing in.</p>
 <h3>The AI assistant in particular</h3>
 
 <p>When you ask the assistant a question, it is sent to our server, which adds
-the passages the answer must be grounded in and forwards the request to Google's
-Gemini API. We use Google's paid service, under which Google does not use your
-question or its answer to improve its products. Google logs requests and responses
-for a limited period, solely to detect and prevent abuse of its service and for any
-disclosure the law requires; it does not publish how long that period is. We do not
-send your notes, your prayer journal, your identity, or anything else you have
-not asked about. Do not put anything in a question you would not want held by
-Google for that period.</p>
+the passages you are studying and forwards the request to Anthropic's Claude. To
+answer, Claude may search the web and read pages it finds: the search terms it
+writes from your question go to a search provider Anthropic uses, and the pages
+it reads are fetched by Anthropic. Your name, email and account are not sent to
+either. Anthropic does not use what is sent through its commercial service, or its
+answers, to train its models. Anthropic keeps requests for a limited period, up to
+30 days under its standard terms (longer only where a request is flagged for review
+under its usage policy), to operate the service and to detect and prevent abuse. We
+do not send your notes, your prayer journal, your identity, or anything else you
+have not asked about. Do not put anything in a question you would not want held by
+Anthropic for that period.</p>
+<p>Earlier versions of the app send the question to Google's Gemini API instead,
+under Google's paid service, which does not use it to improve Google's products and
+keeps it for a limited period to prevent abuse.</p>
 
 <h3>The drafting tools</h3>
 
 <p>The Workspace's drafting tools work the same way, through our server to the
-same Gemini service, and send only what you ask them to work on:</p>
+same Claude service, and send only what you ask them to work on:</p>
 <ul>
   <li><strong>Draft from your study</strong> sends the passage, your exegesis
       worksheet entries and your notes on that passage, and excerpts from the
@@ -187,11 +194,12 @@ same Gemini service, and send only what you ask them to work on:</p>
 </ul>
 <p>None of this is stored by us: the draft comes back to your device and is saved
 there, in your workspace. Your other notes, your prayer journal and your identity
-are not sent. Google keeps requests for the limited period described above.</p>
+are not sent. Anthropic keeps requests for the limited period described above.</p>
 
 <p>The assistant and the drafting tools are available only to accounts whose
-holder has said they are 18 or over. Google's terms do not allow the Gemini API to be used by people under
-18.</p>
+holder has said they are 18 or over. The assistant researches the open web, and
+Anthropic's usage policy expects an AI service offered to minors to carry safeguards
+we have not built, so we keep it for adults.</p>
 
 <p>Answers are labelled as AI-generated throughout the app. The assistant is a
 research aid and is not Scripture, a pastor, or a doctrinal authority; see the
@@ -207,8 +215,10 @@ contract and as our processors:</p>
   <li><strong>Cloudflare</strong> (worldwide network): delivers the downloadable
       editions and resources, and protects the server.</li>
   <li><strong>Resend</strong> (United States): sends account emails.</li>
-  <li><strong>Google</strong>: the Gemini API answers assistant questions; Google
-      Play handles purchases on Android.</li>
+  <li><strong>Anthropic</strong> (United States): Claude answers assistant questions
+      and drafting requests, and searches the web for them.</li>
+  <li><strong>Google</strong>: Google Play handles purchases on Android. The Gemini
+      API answers questions from earlier versions of the app.</li>
   <li><strong>Apple</strong>: the App Store handles purchases on iPhone and iPad.</li>
 </ul>
 <p>We will name any new provider here before it receives anything.</p>
@@ -255,9 +265,9 @@ Android Keystore-backed store.</p>
 is kept until you delete it or delete your account. Community posts remain
 visible to their community until deleted by you or a moderator. Reports are kept
 for as long as the community exists, so that repeated abuse can be recognised. Server logs are
-kept briefly. We do not retain AI questions; Google keeps them for the limited
-period described in section 4. The per-day counter is kept only as long as it is
-needed to enforce a daily limit.</p>
+kept briefly. We do not retain AI questions; Anthropic keeps them for the limited
+period described in section 4. The AI credit ledger (amounts and dates, never what
+was asked) is kept for as long as the account exists.</p>
 
 <p>No system is perfectly secure, and we do not claim otherwise. Turning sending
 off stops the app transmitting; it does not encrypt your device or protect
@@ -287,7 +297,7 @@ cross-context behavioural advertising as those terms are used in California law.
 
 <p>We operate from Texas, in the United States, and data we process is processed
 in the United States.
-Google's Gemini API may process AI requests in other countries. Where we transfer
+Anthropic may process AI requests, and its search provider may handle search terms, in other countries. Where we transfer
 personal data out of the EEA or the UK, we rely on the European Commission's
 standard contractual clauses.</p>
 
