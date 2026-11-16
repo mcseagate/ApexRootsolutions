@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How sign-in works — Covenant</title>
+<meta name="description" content="How a Covenant member signs in: a phone number, then a six-digit code sent by text message. An interactive walk-through of the same steps the app takes.">
+<link rel="stylesheet" href="../../style.css">
+<style>
+  .steps { list-style: none; padding: 0; counter-reset: step; }
+  .steps > li { counter-increment: step; margin: 0 0 0.9rem; padding-left: 2.2rem; position: relative; }
+  .steps > li::before {
+    content: counter(step); position: absolute; left: 0; top: 0.1rem;
+    width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--accent); color: var(--ground);
+    font: 600 0.8rem/1.5rem ui-sans-serif, system-ui, sans-serif; text-align: center;
+  }
+  .flow label { display: block; font: 600 0.85rem/1.4 ui-sans-serif, system-ui, sans-serif; margin: 0 0 0.35rem; }
+  .flow .row { display: flex; gap: 0.5rem; }
+  .flow input[type=tel], .flow input[type=text], .flow select {
+    font: 1rem/1.4 ui-sans-serif, system-ui, sans-serif; color: var(--ink); background: var(--ground);
+    border: 1px solid var(--rule); border-radius: 8px; padding: 0.65rem 0.75rem; min-width: 0;
+  }
+  .flow input[type=tel], .flow input[type=text] { flex: 1; }
+  .flow input:focus-visible, .flow select:focus-visible, .flow button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .flow button {
+    font: 600 1rem/1.4 ui-sans-serif, system-ui, sans-serif; margin-top: 0.9rem; padding: 0.7rem 1.1rem;
+    border: 0; border-radius: 8px; background: var(--accent); color: var(--ground); cursor: pointer;
+  }
+  .flow button[disabled] { opacity: 0.45; cursor: not-allowed; }
+  .flow .link { background: none; color: var(--accent); padding: 0.3rem 0; margin: 0.6rem 1rem 0 0; text-decoration: underline; font-weight: 500; }
+  .sms {
+    background: var(--ground); border: 1px solid var(--rule); border-radius: 14px 14px 14px 4px;
+    padding: 0.7rem 0.9rem; margin: 0.4rem 0 1.1rem; font: 0.95rem/1.5 ui-sans-serif, system-ui, sans-serif;
+  }
+  .sms small { display: block; color: var(--ink-soft); margin-bottom: 0.25rem; }
+  .err { color: #b4522f; font: 0.9rem/1.5 ui-sans-serif, system-ui, sans-serif; min-height: 1.4rem; margin: 0.5rem 0 0; }
+  .ok { font: 600 1.05rem/1.5 ui-sans-serif, system-ui, sans-serif; }
+  .small { font: 0.85rem/1.55 ui-sans-serif, system-ui, sans-serif; color: var(--ink-soft); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Covenant · Apex Root Solutions LLC</p>
+  <h1>How sign-in works</h1>
+  <p class="dates">Phone number, then a six-digit code</p>
+</header>
+
+<p class="lede">Covenant is a marriage-intent dating app for adults. Every member signs in with a phone number,
+and that number is confirmed with a one-time code sent by text message. The app is on iOS and Android; this page
+walks through the same two steps so you can see what is asked and what is sent.</p>
+
+<h2>The steps</h2>
+<ol class="steps">
+  <li><strong>Enter your number.</strong> The member picks a country and types a phone number. The app says:
+      &ldquo;We&rsquo;ll send a six-digit code to confirm it.&rdquo;</li>
+  <li><strong>Receive the code.</strong> One text message arrives. It contains the code and nothing else: no
+      marketing, no link.</li>
+  <li><strong>Enter the code to continue.</strong> Without the correct code the member cannot go any further. The
+      code expires, can be requested again only after a short wait, and is limited in the number of tries.</li>
+</ol>
+
+<h2>Try the walk-through</h2>
+<div class="panel flow" id="flow">
+  <p class="small"><strong>This is a demonstration.</strong> It sends no text message, stores nothing and never leaves
+  your browser. The real sign-in happens inside the Covenant app.</p>
+
+  <form id="step1" novalidate>
+    <label for="phone">Your phone number</label>
+    <div class="row">
+      <select id="country" aria-label="Country code">
+        <option value="+234">Nigeria +234</option>
+      </select>
+      <input id="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="803 000 0000" maxlength="14">
+    </div>
+    <p class="small" style="margin:0.6rem 0 0">By continuing you agree to the <a href="../terms/">Terms of Use</a> and
+    the <a href="../privacy/">Privacy Policy</a>. You will get one text message with a code. Message rates from your
+    network may apply.</p>
+    <button type="submit" id="send" disabled>Send verification code</button>
+    <p class="err" id="err1" role="alert"></p>
+  </form>
+
+  <form id="step2" novalidate hidden>
+    <p style="margin-top:0"><strong>Enter your code.</strong> We sent a 6-digit code to <span id="masked"></span>.</p>
+    <div class="sms" aria-label="The text message the member receives">
+      <small>Text message (sample)</small>
+      <span id="smsBody"></span>
+    </div>
+    <label for="code">Verification code</label>
+    <input id="code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" placeholder="000000">
+    <button type="submit" id="verify" disabled>Verify</button>
+    <button type="button" class="link" id="change">Change number</button>
+    <p class="err" id="err2" role="alert"></p>
+  </form>
+
+  <div id="step3" hidden>
+    <p class="ok">Verified. You can continue.</p>
+    <p class="small">In the app, this is where the member moves on to create a profile. Without the code, the app
+    stays on the code screen.</p>
+    <button type="button" class="link" id="again" style="margin-top:0">Start again</button>
+  </div>
+</div>
+
+<noscript>
+  <div class="panel"><p>The walk-through needs JavaScript. The steps above describe it in full: enter a number,
+  receive a text message such as &ldquo;Your Covenant verification code is 123456. Do not share it with anyone.&rdquo;,
+  and enter the six digits to continue.</p></div>
+</noscript>
+
+<h2>What is sent, and why</h2>
+<ul>
+  <li><strong>The message:</strong> &ldquo;Your Covenant verification code is 123456. Do not share it with
+      anyone.&rdquo; One message per request, to confirm that the person signing in controls that number.</li>
+  <li><strong>Only for sign-in.</strong> We do not send promotional text messages to this number.</li>
+  <li><strong>Who delivers it:</strong> Covenant uses a text-message provider to deliver the code. The
+      <a href="../privacy/">Privacy Policy</a> names it and says what it receives.</li>
+  <li><strong>Your number is private.</strong> It is how you sign in. It is never shown to another member.</li>
+</ul>
+
+<h2>Questions</h2>
+<p>Write to <a href="mailto:support@apsoluts.com">support@apsoluts.com</a> or see <a href="../support/">Support</a>.</p>
+
+<footer class="foot">
+  <p><a href="../">Covenant</a> · <a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Use</a> ·
+     <a href="../guidelines/">Community Guidelines</a> · <a href="../support/">Support</a></p>
+  <p>Apex Root Solutions LLC, a limited liability company organised under the laws of the State of Delaware, with its
+     registered office in Wilmington, New Castle County, Delaware, and its principal place of business in Cedar
+     Hill, Dallas County, Texas.</p>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var phone = $('phone'), send = $('send'), code = $('code'), verify = $('verify');
+  var sample = '';
+
+  function digits(s) { return s.replace(/\D/g, ''); }
+  function nationalNumber() { var d = digits(phone.value); return d.replace(/^0/, ''); }
+  function show(step) {
+    $('step1').hidden = step !== 1; $('step2').hidden = step !== 2; $('step3').hidden = step !== 3;
+    var focus = step === 1 ? phone : step === 2 ? code : null;
+    if (focus) focus.focus();
+  }
+
+  phone.addEventListener('input', function () { send.disabled = nationalNumber().length !== 10; $('err1').textContent = ''; });
+  code.addEventListener('input', function () {
+    code.value = digits(code.value).slice(0, 6); verify.disabled = code.value.length !== 6; $('err2').textContent = '';
+  });
+
+  $('step1').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var n = nationalNumber();
+    if (n.length !== 10) { $('err1').textContent = 'Enter the ten digits of your number, for example 803 000 0000.'; return; }
+    var buf = new Uint32Array(1); (window.crypto || window.msCrypto).getRandomValues(buf);
+    sample = String(100000 + (buf[0] % 900000));
+    $('masked').textContent = $('country').value + ' ••• ••• ' + n.slice(-4);
+    $('smsBody').textContent = 'Your Covenant verification code is ' + sample + '. Do not share it with anyone.';
+    code.value = ''; verify.disabled = true; $('err2').textContent = '';
+    show(2);
+  });
+
+  $('step2').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (code.value !== sample) { $('err2').textContent = 'That code is not right. Check the message and try again.'; return; }
+    show(3);
+  });
+
+  $('change').addEventListener('click', function () { sample = ''; show(1); });
+  $('again').addEventListener('click', function () { phone.value = ''; send.disabled = true; sample = ''; show(1); });
+})();
+</script>
+</body>
+</html>
