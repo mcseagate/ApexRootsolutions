@@ -66,6 +66,18 @@ The same values are baked into the app: `QSPublishedLinks` in
 `ios/QuoteShield/project.yml` and `BuildConfig` fields in
 `android/quoteshield/app/build.gradle.kts`. Change them together.
 
+## Covenant
+
+A marriage-intent dating app. Members sign in with a phone number confirmed by a six-digit code.
+
+| Page | URL |
+| --- | --- |
+| How sign-in works | https://mcseagate.github.io/ApexRootsolutions/covenant/signin/ |
+| Privacy Policy | https://mcseagate.github.io/ApexRootsolutions/covenant/privacy/ |
+| Terms of Use | https://mcseagate.github.io/ApexRootsolutions/covenant/terms/ |
+| Community Guidelines | https://mcseagate.github.io/ApexRootsolutions/covenant/guidelines/ |
+| Support | https://mcseagate.github.io/ApexRootsolutions/covenant/support/ |
+
 ## Layout
 
 Each product owns a directory, because each collects different things and
